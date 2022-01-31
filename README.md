@@ -1,3 +1,3 @@
-# cpp-lab-5
+# CPP-Merge-and-Bubble-Sort
 This program prints a menu asking the user to have the computer read the input file, then asks the user to choose between bubble sort and merge sort to sort the file. The code
 then performs the sort and prints the runtime. It writes the output to a designated file and prints a statement of this. The header file contains all of the headers for the helper functions referenced in main, including the two sort functions. Bubble sort works by repeatedly swapping adjacent array elements if they are in the wrong order, while merge sort works by dividing the array into 2 subarrays and then merging them back together in order.
