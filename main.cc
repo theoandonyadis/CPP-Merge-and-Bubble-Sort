@@ -1,6 +1,6 @@
 //Theo Andonyadis
-//ECE 2620 Section 001
-//Lab 5a
+/*This code prints a menu asking the user to have the computer read the input file, then asks the user to choose between bubblesort and mergesort to sort the file. The code
+then performs the sort and prints the runtime. It writes the output to a designated file and prints a statement of this.*/
 #include <iostream>
 #include <ctime>
 #include "myheaders.h"
@@ -22,11 +22,11 @@ int main() {
 		
 		switch (choice) {
 
-			case 1: // Read input file and store data in arrays data1 and data2
-                    // The function 'readfile' returns the size of the file that was read
+			case 1: 	// Read input file and store data in arrays data1 and data2
+                    			// The function 'readfile' returns the size of the file that was read
 					// If the file could not be read, 'readfile' returns -1
 				
-					ifilename = "lab5_input.txt";
+					ifilename = "sort_input.txt";
 					sz = readfile(ifilename, data1, data2);
 			
 					if (sz < 0)	 {
@@ -51,7 +51,7 @@ int main() {
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "BubbleSort ran for " << cpu_time_used << " secs.";
 			
-					ofilename = "lab5_bubbleout.txt";
+					ofilename = "bubbleout.txt";
 					writefile(data1, sz, ofilename);
 					
 					if (sz < 0)	 {
@@ -76,7 +76,7 @@ int main() {
 					cpu_time_used = (end_time - begin_time) / CLOCKS_PER_SEC;
 					cout << endl << "MergeSort ran for " << cpu_time_used << " secs.";
 			
-					ofilename = "lab5_mergeout.txt";
+					ofilename = "mergeout.txt";
 					writefile(data2, sz, ofilename);
 					
 					if (sz < 0)	 {
